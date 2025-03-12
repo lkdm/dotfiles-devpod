@@ -1,10 +1,9 @@
 # Set up Homebrew on Mac or Linux
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  # needed for brew
+  # Homebrew on Mac OS
   eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-if grep -E "^(ID|NAME)=" /etc/os-release | grep -Eqi "ubuntu|debian|alpine"; then
-  # needed for brew to work
+else
+  # Homebrew on Linux
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
